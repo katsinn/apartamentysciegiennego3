@@ -2,9 +2,8 @@ body
 {
     /* Background pattern from toptal.com */
     background-image: url("img/tlo.png");
-    font-family: "Gowun Dodum", sans-serif;
+    font-family: "Quicksand", sans-serif;
     color: #58503a   ;
-    font-family: "Lato", sans-serif;
     font-size: 20px;
     margin: 0;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -14,28 +13,24 @@ body
 {
     width: 100%;
     background-color: rgba(107, 85, 37, 0.1);
-    font-size: 25px;
-    line-height: 1;
     text-align: left;
     text-transform: uppercase;
     letter-spacing: 3px;
     border-bottom: 2px solid rgba(77, 61, 27, 0.4);
-    line-height: 1.4;
     box-sizing: border-box;
-    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0;
+    margin-bottom: 10px;
 }
 
 .nav {
     width: 100%;
-    padding: 10px 0;
+    padding: 5px 0;
     text-align: center;
-    background-color: transparent; /* subtelne tło, opcjonalnie */
+    background-color: transparent;
     overflow: hidden; /* żeby floaty nie wyciekały */
-    font-family: inherit;
 }
 
 .nav ol {
@@ -108,8 +103,8 @@ body
 
 .slide-track {
   display: flex;
-  gap: 20px;
-  animation: scroll 180s linear infinite;
+  gap: 5px;
+  animation: scroll 400s linear infinite;
   align-items: center;
 }
 
@@ -138,7 +133,6 @@ body
     line-height: 1;
     text-align: center;
     text-transform: uppercase;
-    padding: 10px 30px 10px 20px;
     letter-spacing: 3px;
     border-bottom: 2px solid rgba(77, 61, 27, 0.4);
     border-top: 2px solid rgba(77, 61, 27, 0.4);
@@ -148,7 +142,7 @@ body
     overflow: visible
     display: flex;
     flex-wrap: wrap;
-    margin-top: 40px;
+    margin-top: 10px;
     padding: 20px;
     box-sizing: border-box;
     
@@ -170,6 +164,7 @@ body
   padding: 20px;
   text-align: center;
   transition: transform 0.3s;
+  overflow: hidden;
   }
 
   .apartment-card:hover {
@@ -186,9 +181,11 @@ body
 
   .thumbnails {
     display: flex;
+    overflow-x: auto; /*poziomy scroll*/
     justify-content: center;
     gap: 8px;
     margin-bottom: 15px;
+    scrollbar-width: thin;
   }
 
   .thumbnail {
@@ -199,11 +196,12 @@ body
     border: 2px solid transparent;
     border-radius: 8px;
     transition: border-color 0.3s;
+    flex: 0 0 auto;
   }
 
-  .thumbnail:hover {
-    border-color: #007BFF;
-  }
+.thumbnail:hover {
+   border-color: #007BFF;
+}
 
 .gallery {
   position: relative;
@@ -362,5 +360,44 @@ body
 html {
   scroll-behavior: smooth;
 }
+
+@media (max-width: 768px) {
+  .apartments-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .apartment-card {
+    width: 100%;
+    max-width: 500px;
+    padding: 24px;
+  }
+
+  .gallery img.main-image {
+    height: auto;
+    max-height: 300px;
+  }
+
+  .thumbnail {
+    width: 70px;
+    height: 50px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .overlay {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
+
 
 
