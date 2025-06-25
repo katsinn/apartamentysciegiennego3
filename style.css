@@ -25,6 +25,14 @@ body
     margin-bottom: 10px;
 }
 
+.mobile-title
+{
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    font-style: bold;
+}
+
 .nav {
     width: 100%;
     padding: 5px 0;
@@ -48,10 +56,6 @@ body
     line-height: 40px;
     border-right: 1px dashed rgba(77, 61, 27, 0.4);
     text-align: center;
-}
-
-.nav ol li:last-child {
-    border-right: none; /* brak kreski po ostatnim elemencie */
 }
 
 .nav ol li a {
@@ -138,7 +142,7 @@ body
     line-height: 1.4;
     box-sizing: border-box;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    overflow: visible
+    overflow: visible;
     display: flex;
     flex-wrap: wrap;
     margin-top: 10px;
@@ -361,6 +365,7 @@ html {
 }
 
 @media (max-width: 768px) {
+  /* KAFELKI */
   .apartments-section {
     flex-direction: column;
     align-items: center;
@@ -370,7 +375,7 @@ html {
   .apartment-card {
     width: 100%;
     max-width: 500px;
-    padding: 24px;
+    padding: 0px;
   }
 
   .gallery img.main-image {
@@ -396,12 +401,29 @@ html {
     padding: 6px 12px;
   }
 
-  .zarezerwujnocleg
-  {
+  .nav {
+    display: none;
+  }
+
+  .mobile-title{
     font-size: 10px;
   }
   
+  .opis h1
+  {
+    font-size: 16px;
+    margin: 0 auto 10px auto;
+    text-align: center; 
+  }
+
+  .opis p
+  {
+    font-size: 10px;
+    margin: 0 auto 10px auto;
+  }
 }
+
+
 
 
 
